@@ -1,0 +1,10 @@
+{
+  "name": "statistical-analysis-of-texts",
+  "version": "1.0.0",
+  "description": "This repository is considering the possibility of identifying artificially generated text based on statistical methods.",
+  "main": "index.js",
+  "repository": "https://github.com/im-rasulev/statistical-analysis-of-texts.git",
+  "author": "Ilyas Musin <im_rasulev@vk.com>",
+  "license": "MIT",
+  "type": "module"
+}
