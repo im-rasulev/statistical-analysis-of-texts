@@ -1,3 +1,3 @@
 # statistical-analysis-of-texts
 
-# node index
+node index
