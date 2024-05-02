@@ -50,23 +50,23 @@ export class Functions {
     };
 
     generateNGrams = ({ text, n }) => {
-        const words = text.toLowerCase().replace(/[^a-zа-я0-9 ]/g, "").split(" ");
-        const nGrams = [];
+        const words = text.toLowerCase().replace(/[^a-zа-я0-9 ]/g, '').split(' ');
+        const n_grams = [];
         for (let i = 0; i < words.length - n + 1; i++) {
-            let nGram = "";
+            let n_gram = '';
             for (let j = 0; j < n; j++) {
-                nGram += (j > 0 ? " " : "") + words[i + j];
-            }
-            nGrams.push(nGram);
-        }
-        return nGrams;
+                n_gram += (j > 0 ? ' ' : '') + words[i + j];
+            };
+            n_grams.push(n_gram);
+        };
+        return n_grams;
     };
 
     countPopularWords = ({ array, limit = 100 }) => {
         let words_map = {};
         array.forEach(word => {
-            const lowerCaseWord = word.toLowerCase();
-            words_map[lowerCaseWord] = (words_map[lowerCaseWord] || 0) + 1;
+            const lower_case_word = word.toLowerCase();
+            words_map[lower_case_word] = (words_map[lower_case_word] || 0) + 1;
         });
         const popular_words = Object.keys(words_map)
             .map(word => ({ word, count: words_map[word] }))
